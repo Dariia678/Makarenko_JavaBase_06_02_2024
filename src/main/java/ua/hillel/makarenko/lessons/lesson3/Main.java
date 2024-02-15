@@ -29,7 +29,7 @@ public class Main {
         String str4 = "tablespoons sugar";
         System.out.println(str4);
 
-        byte number4 = 1;
+        double number4 = 0.5;
         System.out.println(number4);
 
         String str5 = "glass boiling water";
