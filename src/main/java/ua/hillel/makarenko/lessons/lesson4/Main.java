@@ -130,19 +130,19 @@ public class Main {
 
         System.out.println(Math.random() * 10);
 
-//      ?? 0.0 ?? 0.999999
+//      От 0.0 до 0.999999
         System.out.println((int) (Math.random() * 10));
         System.out.println((int) (Math.random() * 10));
-//      ?? 0.0 ?? 10
+//      От 0.0 до 10
         System.out.println((int) (Math.random() * 11));
         System.out.println(Math.round(Math.random() * 10));
 
-//      ?? 15 ?? 30
+//      От 15 до 30
         System.out.println((int) (Math.random() * 16) + 15);
 
         int min = 15;
         int max = 30;
-//      ???????
+//      Формула
         int result = (int) (Math.random() * (max - min + 1)+ min);
         System.out.println((int) (Math.random() * (max - min + 1) + min));
         System.out.println(result);
