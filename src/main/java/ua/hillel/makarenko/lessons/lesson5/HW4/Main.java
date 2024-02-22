@@ -55,7 +55,7 @@ public class Main {
         System.out.println("Середнє арифметичне балів команди " + teamName1 + ": " + avgScore1);
         System.out.println("Середнє арифметичне балів команди " + teamName2 + ": " + avgScore2);
         if (isDraw) {
-            System.out.println("Нічия команди набрали по " + frags1 + "очків." );
+            System.out.println("Нічия команди набрали по " + frags1 + " " + "очків." );
         } else {
             System.out.println("Перемогла команда " + winner + ", набравши " + winnerFrags + " " + "очків.");
         }
