@@ -8,7 +8,7 @@ public class Main {
         Random rand = new Random();
         int numberToGuess = rand.nextInt(11);
         int attempts = 3;
-        int userGuess = -1;
+        int userGuess;
 
         System.out.println("Комп'ютер загадав число від 0 до 10. Спробуйте відгадати!");
 
