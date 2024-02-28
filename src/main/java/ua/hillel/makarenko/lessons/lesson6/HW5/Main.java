@@ -8,6 +8,7 @@ public class Main {
         Random rand = new Random();
         int numberToGuess = rand.nextInt(11);
         int attempts = 3;
+        int userGuess = -1;
 
         System.out.println("Комп'ютер загадав число від 0 до 10. Спробуйте відгадати!");
 
@@ -18,7 +19,7 @@ public class Main {
 
             while (true) {
                 if (input.hasNextInt()) {
-                    numberToGuess = input.nextInt();
+                    userGuess = input.nextInt();
                     break;
                 } else {
                     System.out.println("Виникла помилка. Перезапустіть, будь ласка, програму.");
@@ -26,7 +27,7 @@ public class Main {
                     System.exit(0);
                 }
             }
-            if (attempts == numberToGuess) {
+            if (userGuess == numberToGuess) {
                 System.out.println("Вітаємо! Ви відгадали число!");
                 break;
             } else {
