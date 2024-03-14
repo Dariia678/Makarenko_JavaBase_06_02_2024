@@ -52,7 +52,7 @@ public class Main {
 
 //        System.out.println(getFactorial(5));
 
-        System.out.println(evclide(12, 3));
+//        System.out.println(evclide(12, 3));
     }
 
     static void demo1 () {
