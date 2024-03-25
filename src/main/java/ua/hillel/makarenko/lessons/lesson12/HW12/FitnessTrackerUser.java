@@ -54,7 +54,7 @@ public class FitnessTrackerUser {
     }
 
     public static void main(String[] args) {
-        FitnessTrackerUser user1 = new FitnessTrackerUser("Bill", 2, 5, 1978, "bill@example.com", "689877567");
+        FitnessTrackerUser user1 = new FitnessTrackerUser("Bun", 2, 5, 1978, "bill@example.com", "689877567");
         user1.setSurname("Doe");
         user1.setWeight(75);
         user1.setBloodPressure(120);
