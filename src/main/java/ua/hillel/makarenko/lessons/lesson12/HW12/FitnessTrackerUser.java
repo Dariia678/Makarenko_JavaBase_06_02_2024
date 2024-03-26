@@ -1,38 +1,55 @@
 package ua.hillel.makarenko.lessons.lesson12.HW12;
 
 public class FitnessTrackerUser {
-    private String name;
-    private int dayOfBirth;
-    private int monthOfBirth;
-    private int yearOfBirth;
-    private String email;
-    private String phone;
-
-    private String surname;
+    private final String name;
+    private final int birthDay;
+    private final int birthMonth;
+    private final int birthYear;
+    private final String email;
+    private final String phone;
+    private String lastName;
     private int weight;
-    private int bloodPressure;
+    private String bloodPressure;
     private int stepsPerDay;
-    private int age;
+    private final int age;
 
-    public FitnessTrackerUser(String name, int dayOfBirth, int monthOfBirth, int yearOfBirth, String email, String phone) {
+    public FitnessTrackerUser(String name, int birthDay, int birthMonth, int birthYear, String email, String phone,
+                              String lastName, int weight, String bloodPressure, int stepsPerDay) {
         this.name = name;
-        this.dayOfBirth = dayOfBirth;
-        this.monthOfBirth = monthOfBirth;
-        this.yearOfBirth = yearOfBirth;
+        this.birthDay = birthDay;
+        this.birthMonth = birthMonth;
+        this.birthYear = birthYear;
         this.email = email;
         this.phone = phone;
-        this.age = 2024 - yearOfBirth;
+        this.lastName = lastName;
+        this.weight = weight;
+        this.bloodPressure = bloodPressure;
+        this.stepsPerDay = stepsPerDay;
+        this.age = 2020 - birthYear;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void printAccountInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Date of Birth: " + birthDay + "/" + birthMonth + "/" + birthYear);
+        System.out.println("Age: " + age);
+        System.out.println("Email: " + email);
+        System.out.println("Phone: " + phone);
+        System.out.println("Weight: " + weight + " kg");
+        System.out.println("Blood Pressure: " + bloodPressure);
+        System.out.println("Steps per Day: " + stepsPerDay);
+        System.out.println();
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public void setWeight(int weight) {
         this.weight = weight;
     }
 
-    public void setBloodPressure(int bloodPressure) {
+    public void setBloodPressure(String bloodPressure) {
         this.bloodPressure = bloodPressure;
     }
 
@@ -40,35 +57,8 @@ public class FitnessTrackerUser {
         this.stepsPerDay = stepsPerDay;
     }
 
-    public void printAccountInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Surname: " + surname);
-        System.out.println("Date of Birth: " + dayOfBirth + "/" + monthOfBirth + "/" + yearOfBirth);
-        System.out.println("Age: " + age);
-        System.out.println("Email: " + email);
-        System.out.println("Phone: " + phone);
-        System.out.println("Weight: " + weight + " kg");
-        System.out.println("Blood Pressure: " + bloodPressure);
-        System.out.println("Steps per day: " + stepsPerDay);
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        FitnessTrackerUser user1 = new FitnessTrackerUser("Bun", 2, 5, 1978, "bill@example.com", "689877567");
-        user1.setSurname("Doe");
-        user1.setWeight(75);
-        user1.setBloodPressure(120);
-        user1.setStepsPerDay(10000);
-
-        FitnessTrackerUser user2 = new FitnessTrackerUser("Maria", 23, 8, 1995, "maria@example.com", "234567877");
-        user2.setSurname("Smith");
-        user2.setWeight(60);
-        user2.setStepsPerDay(8000);
-
-        FitnessTrackerUser user3 = new FitnessTrackerUser("Mon", 15, 10, 2003, "mon@example.com", "2345657687");
-
-        user1.printAccountInfo();
-        user2.printAccountInfo();
-        user3.printAccountInfo();
+    public int getAge() {
+        return age;
     }
 }
+
