@@ -4,7 +4,6 @@ public enum DrinksMachine {
     КАВА, ЧАЙ, ЛИМОНАД, МОХІТО, МИНЕРАЛКА, КОКА_КОЛА
 }
 class Drinks {
-    // константи для цін
     static final double COFFEE_PRICE = 2.90;
     static final double TEA_PRICE = 2.0;
     static final double LEMONADE_PRICE = 4.0;
@@ -15,7 +14,6 @@ class Drinks {
     static int totalDrinksCount = 0;
     static double totalPrice = 0;
 
-    // методи для приготування кожного напою
     static void makeCoffee() {
         System.out.println("Кава готова.");
         totalDrinksCount++;
